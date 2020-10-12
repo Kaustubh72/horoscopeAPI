@@ -1,7 +1,7 @@
 const express = require('express');
 const request = require('request');
 const cheerio = require('cheerio');
-const cors = require('cors');
+
 const app = express();
 app.get('/',async function(req, res) 
 {
