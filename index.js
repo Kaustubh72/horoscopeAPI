@@ -3,7 +3,7 @@ const request = require('request');
 const cheerio = require('cheerio');
 const cors = require('cors');
 const app = express();
-app.get('/', cors(),async function(req, res) 
+app.get('/',async function(req, res) 
 {
     var prediction="";
     var horoscope = ["none","Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capricorn","Aquarius","Pisces"];
