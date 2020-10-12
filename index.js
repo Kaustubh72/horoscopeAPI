@@ -28,5 +28,5 @@ app.get('/api', async function(req, res)
     }  
   res.send(json);
 });
-app.listen(process.env.PORT || 5000);
+app.listen(process.env.PORT || 80);
 module.exports = app;
