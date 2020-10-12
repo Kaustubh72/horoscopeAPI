@@ -1,10 +1,14 @@
 const express = require('express');
 const request = require('request');
 const cheerio = require('cheerio');
-const cors = require('cors');
 const app = express();
-app.use(cors())
-app.get('/',async function(req, res) 
+app.use(function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, GET, PATCH, DELETE, OPTIONS');
+  next();
+});
+app.get('/', async function(req, res) 
 {
     var prediction="";
     var horoscope = ["none","Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capricorn","Aquarius","Pisces"];
