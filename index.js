@@ -1,8 +1,9 @@
 const express = require('express');
 const request = require('request');
 const cheerio = require('cheerio');
-app.use(cors())
+const cors = require('cors');
 const app = express();
+app.use(cors())
 app.get('/',async function(req, res) 
 {
     var prediction="";
